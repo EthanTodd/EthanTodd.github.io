@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+	<title>tic.tac.toe.</title>
+</head>
+<body>
+	
+	<div class="container">
+
+		<header class="row">
+			<div class="col-sm-10 header" id="title">
+				<p id="tictactoe"></p>
+			</div>
+			<div class="col-sm-2 header" id="newGameButton" header>
+				<div class="row">
+					<button id="newGame" type="button" class="btn btn-default btn-sm" data-toggle="modal" data-target="#myModal">new.game.</button>
+				</div>
+				<div class="row">
+					<button id="wipeScores" type="button" class="btn btn-default btn-sm">wipe.scores.</button>
+				</div>
+			</div>
+		</header>
+
+
+		<div id="myModal" class="modal fade" role="dialog">
+		  	<div class="modal-dialog">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        	<h4 class="modal-title">tic.tac.toe.</h4>
+			      	</div>
+			      	<div class="modal-body">
+			      		<p>choose.your.name.</p>
+		        		<input id="input-name-player1" placeholder="player.one.name"></input>
+						<input id="input-name-player2"placeholder="player.two.name"></input>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button id="playerInput" type="button" class="btn btn-default" data-dismiss="modal">enter.</button>
+			      	</div>
+		    	</div>
+		  	</div>
+		</div>
+
+
+		<div id="myModal2" class="modal fade" role="dialog">
+		  	<div class="modal-dialog">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        	<h4 class="modal-title">thanks.for.playing.</h4>
+			      	</div>
+			      	<div class="modal-body">
+			      		<p id="winnerText"></p>
+			      		<p>x.o. ...rematch.?</p>
+		        		<button id="yes" data-dismiss="modal">yes.</button>
+						<button id="no" data-dismiss="modal">no.</button>
+			      	</div>
+			      	<div class="modal-footer">
+			      	</div>
+		    	</div>
+		  	</div>
+		</div>
+
+
+		<div id="myModal3" class="modal fade" role="dialog">
+		  	<div class="modal-dialog">
+		    	<div class="modal-content">
+		      		<div class="modal-header">
+			        	<button type="button" class="close" data-dismiss="modal">&times;</button>
+			        	<h4 class="modal-title">have.a.nice.day.</h4>
+			      	</div>
+			      	<div class="modal-body">
+			      		<p>change.your.mind.?</p>
+						<button id="changedMind" data-dismiss="modal">play.new.game.</button>
+			      	</div>
+			      	<div class="modal-footer">
+			        	<button type="button" class="btn btn-default" data-dismiss="modal">enter.</button>
+			      	</div>
+		    	</div>
+		  	</div>
+		</div>
+			
+
+		<div class="row">
+			<div id="enterScore1" class="col-sm-1 score">
+				<p>score.</p>
+			</div>
+			<div class="col-sm-4 score" id="player1"></div>
+			<div class="col-sm-2 score" id="vs"><p>vs.</p></div>
+			<div class="col-sm-4 score" id="player2"></div>
+			<div id="enterScore2" class="col-sm-1 score">
+				<p>score.</p>
+			</div>
+		</div>
+
+			
+			<div class="board">
+			    <div class="row">
+					
+					<div class="col-sm-3 empty"></div>
+					<div class="col-sm-2 square row1 col1 diag1"></div>
+					<div class="col-sm-2 square row1 col2"></div>
+					<div class="col-sm-2 square row1 col3 diag2"></div>
+					<div class="col-sm-3 empty"></div>
+					
+					
+				</div>
+				<div class="row">
+					
+					<div class="col-sm-3 empty"></div>
+					<div class="col-sm-2 square row2 col1"></div>
+					<div class="col-sm-2 square row2 col2 diag1 diag2"></div>
+					<div class="col-sm-2 square row2 col3"></div>
+					<div class="col-sm-3 empty"></div>
+					
+					
+				</div>
+				<div class="row">
+					
+					<div class="col-sm-3 empty"></div>
+					<div class="col-sm-2 square row3 col1 diag2"></div>
+					<div class="col-sm-2 square row3 col2"></div>
+					<div class="col-sm-2 square row3 col3 diag1"></div>
+					<div class="col-sm-3 empty"></div>
+					
+					
+				</div>
+			</div>
+
+
+		<div class="row footer">
+			<div class="col-sm-12"></div>
+		</div>
+		
+	</div>
+	
+
+</body>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="main.js"></script>
+</html>
