@@ -10,9 +10,7 @@ var player2Score = 0;
 var winner = "nobody";
 
 
-//GAME RENDERS!
-
-
+//Game Renders and tic.tac.toe. types on to the screen
 var ticTacToe = ["t","i","c",".","t","a","c",".","t","o","e","."]
 var i = 0;
 var headerText = "";
@@ -27,9 +25,7 @@ var intervalId = setInterval(function (){
 }, 250);
 
 
-//CHOOSING NAMES!
-
-
+//new game button to choose names
 var newGameButton = $("#newGame");
 
 var inputNamePlayer1 = "";
@@ -44,25 +40,20 @@ $("#playerInput").on("click", function(event){
 	player2Score = 0;
 });
 
-
+//wipe scores button
 $("#wipeScores").on("click", function(event){
 	location.reload();
 })
 
 
-//ready.to.play.
-
-
-
-
+//all possible win scenarios
 var winScenarios = [
 $(".row1"), $(".row2"), $(".row3"),
 $(".col1"), $(".col2"), $(".col3"),
-$(".diag1"), $(".diag2")]
+$(".diag1"), $(".diag2")];
 
-
+//event listener for play
 allSquares.one("click", function(event){
-	// movesPlayer++;
 	identifySquares();
 });
 
@@ -81,6 +72,7 @@ var identifySquares = function identifySquares(){
 	}
 }
 
+//evaluate a winner function
 var evaluateWinner = function evaluateWinner(){
 	for (var i = 0; i < winScenarios.length; i++){	
 		if (winScenarios[i].text() === "xxx"){
@@ -105,6 +97,7 @@ scoreKeeping();
 
 var winnerText = $("#winnerText");
 
+//modal that launches once a winner is chosen
 var gameOver = function gameOver (){
 	$("#myModal2").modal();
 	winnerText.text(winner + " wins.");
@@ -120,6 +113,7 @@ $("#no").on("click", function(){
 	location.reload();
 });
 
+//function to reset the game
 var resetGame = function resetGame(){
 	movesPlayer = 0;
 	console.log("reading reset game function");
@@ -130,23 +124,13 @@ var resetGame = function resetGame(){
 };
 
 
-//HOW TO CHOOSE A WINNER!
+
+//to do in the future
+
+//after rematch is chosen, player that lost gets
+//to go first
 
 
-
-//the first player to align three of their boxes in a 
-//row or a diagonal wins the game.
-
-//if there is no alignment there is a tie
-
-
-
-//BONUS! (IF THERE IS TIME)
-
-
-
-//if someone reaches 5 won games they get to pick a 
-//new object to use besides Xs and Os.
 
 
 
